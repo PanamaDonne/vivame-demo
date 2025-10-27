@@ -30,10 +30,24 @@ module.exports = {
           700: '#a21caf',
           800: '#86198f',
           900: '#701a75',
+        },
+        // Vivame brand colors
+        vivame: {
+          pink: '#E91E63',
+          purple: '#9C27B0',
+          teal: '#00BCD4',
+          orange: '#FF9800',
+          green: '#4CAF50',
+          blue: '#2196F3',
+          red: '#8B1538', // Dark wine red to match the header
+          dark: '#2C3E50',
+          light: '#F8F9FA',
+          cream: '#FEFCFB', // Warm cream background
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

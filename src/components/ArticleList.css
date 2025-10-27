@@ -2,6 +2,8 @@
 
 .article-list-container {
   padding: 2rem;
+  background: #fef7f0;
+  min-height: 100vh;
 }
 
 .article-list-header {
@@ -12,13 +14,14 @@
 }
 
 .article-list-header h2 {
-  color: #667eea;
+  color: #8B4513;
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .article-list-header p {
-  color: #666;
+  color: #8B7355;
   font-size: 1.1rem;
 }
 
@@ -102,11 +105,11 @@
 }
 
 .article-card {
-  background: white;
-  border: 1px solid #e9ecef;
+  background: #FFF8DC;
+  border: 1px solid #D2B48C;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(139, 69, 19, 0.1);
   transition: all 0.3s ease;
   height: 100%;
   display: flex;
@@ -115,8 +118,9 @@
 
 .article-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  border-color: #667eea;
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.2);
+  border-color: #8B4513;
+  background: #FFFACD;
 }
 
 .article-header {
@@ -261,22 +265,22 @@
 }
 
 .read-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
   color: white;
 }
 
 .read-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
 }
 
 .share-btn {
-  background: #28a745;
+  background: #1976D2;
   color: white;
 }
 
 .share-btn:hover {
-  background: #218838;
+  background: #1565C0;
   transform: translateY(-1px);
 }
 

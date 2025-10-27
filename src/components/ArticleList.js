@@ -6,88 +6,88 @@ const ArticleList = ({ searchQuery }) => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCredibility, setSelectedCredibility] = useState('all');
 
-  // Sample articles data
+  // Klimakterieartiklar på svenska
   const articles = [
     {
       id: 1,
-      title: "Understanding Perimenopause: The Transition Phase",
-      excerpt: "Perimenopause can begin as early as your 30s and last for several years. Learn about the signs, symptoms, and how to manage this transitional period.",
-      content: "Perimenopause is the transitional period before menopause when your body begins to produce less estrogen. This phase can last anywhere from 2 to 10 years and typically begins in your 40s, though it can start earlier. Common symptoms include irregular periods, hot flashes, sleep disturbances, mood changes, and vaginal dryness. Understanding these changes and working with healthcare providers can help you navigate this phase more comfortably.",
+      title: "Förstå klimakteriet: Övergångsfasen",
+      excerpt: "Klimakteriet kan börja redan i 30-årsåldern och pågå i flera år. Lär dig om tecken, symptom och hur du hanterar denna övergångsperiod.",
+      content: "Klimakteriet är övergångsperioden före menopaus när din kropp börjar producera mindre östrogen. Denna fas kan pågå i 2-10 år och börjar vanligtvis i 40-årsåldern, även om den kan starta tidigare. Vanliga symptom inkluderar oregelbundna menstruationer, hettflusher, sömnstörningar, humörsvängningar och vaginal torrhet. Att förstå dessa förändringar och arbeta med vårdgivare kan hjälpa dig att navigera denna fas bekvämare.",
       category: "evidence-based",
-      author: "Dr. Sarah Johnson, MD",
-      readTime: "5 min read",
+      author: "Dr. Anna Lindqvist, MD",
+      readTime: "5 min läsning",
       publishDate: "2024-01-15",
-      tags: ["perimenopause", "symptoms", "hormones"],
+      tags: ["klimakteriet", "symptom", "hormoner"],
       credibility: "medical_reviewed",
       source: "peer_reviewed",
       validationBadge: "medically_reviewed"
     },
     {
       id: 2,
-      title: "My Journey Through Early Menopause at 35",
-      excerpt: "A personal story about navigating early menopause, the challenges faced, and the support systems that made a difference.",
-      content: "At 35, I never expected to be dealing with menopause. When my periods became irregular and I started experiencing hot flashes, I thought it was stress. After months of uncertainty, my doctor confirmed I was in early menopause. The emotional journey was challenging - feeling like my body was betraying me, worrying about fertility, and dealing with symptoms I wasn't prepared for. But through support groups, therapy, and finding the right medical team, I've learned to embrace this new chapter of my life.",
+      title: "Min resa genom tidig klimakterie vid 35",
+      excerpt: "En personlig berättelse om att navigera tidig klimakterie, de utmaningar som möttes och stödsystemen som gjorde skillnad.",
+      content: "Vid 35 förväntade jag mig aldrig att hantera klimakteriet. När mina menstruationer blev oregelbundna och jag började uppleva hettflusher trodde jag det var stress. Efter månader av osäkerhet bekräftade min läkare att jag var i tidig klimakterie. Den emotionella resan var utmanande - känslan av att min kropp förrådde mig, oro för fertilitet och att hantera symptom jag inte var förberedd på. Men genom stödgrupper, terapi och att hitta rätt medicinteam har jag lärt mig att omfamna detta nya kapitel i mitt liv.",
       category: "community",
       author: "Maria S.",
-      readTime: "7 min read",
+      readTime: "7 min läsning",
       publishDate: "2024-01-10",
-      tags: ["early menopause", "personal story", "support"],
+      tags: ["tidig klimakterie", "personlig berättelse", "stöd"],
       credibility: "community_verified",
       source: "user_submitted",
       validationBadge: "community_story"
     },
     {
       id: 3,
-      title: "Hormone Replacement Therapy: Benefits and Risks",
-      excerpt: "A comprehensive look at HRT options, their effectiveness, and important considerations for women considering treatment.",
-      content: "Hormone replacement therapy (HRT) can be an effective treatment for managing menopause symptoms, but it's not right for everyone. This article explores the different types of HRT available, their benefits in treating hot flashes, vaginal dryness, and bone health, as well as the potential risks including blood clots and certain cancers. It's important to discuss your individual risk factors and family history with your healthcare provider to determine if HRT is appropriate for you.",
+      title: "Hormonbehandling: Fördelar och risker",
+      excerpt: "En omfattande översikt av HRT-alternativ, deras effektivitet och viktiga överväganden för kvinnor som överväger behandling.",
+      content: "Hormonbehandling (HRT) kan vara en effektiv behandling för att hantera klimakteriesymptom, men det är inte rätt för alla. Denna artikel utforskar de olika typerna av HRT som finns tillgängliga, deras fördelar vid behandling av hettflusher, vaginal torrhet och benskydd, samt de potentiella riskerna inklusive blodproppar och vissa cancertyper. Det är viktigt att diskutera dina individuella riskfaktorer och familjehistoria med din vårdgivare för att avgöra om HRT är lämpligt för dig.",
       category: "evidence-based",
-      author: "Dr. Emily Chen, MD",
-      readTime: "8 min read",
+      author: "Dr. Eva Johansson, MD",
+      readTime: "8 min läsning",
       publishDate: "2024-01-08",
-      tags: ["HRT", "treatment", "hormones", "medical advice"],
+      tags: ["HRT", "behandling", "hormoner", "medicinsk rådgivning"],
       credibility: "medical_reviewed",
       source: "peer_reviewed",
       validationBadge: "medically_reviewed"
     },
     {
       id: 4,
-      title: "Natural Remedies for Hot Flashes: What Actually Works",
-      excerpt: "Explore evidence-based natural approaches to managing hot flashes, from lifestyle changes to herbal supplements.",
-      content: "While hot flashes are one of the most common and bothersome symptoms of menopause, there are several natural approaches that may help. Regular exercise, maintaining a healthy weight, avoiding triggers like spicy foods and alcohol, and practicing stress-reduction techniques like yoga and meditation can all make a difference. Some women find relief with black cohosh, soy isoflavones, or acupuncture, though research on their effectiveness is mixed. Always consult with your healthcare provider before trying new supplements.",
+      title: "Naturliga botemedel mot hettflusher: Vad som faktiskt fungerar",
+      excerpt: "Utforska evidensbaserade naturliga tillvägagångssätt för att hantera hettflusher, från livsstilsförändringar till växtbaserade kosttillskott.",
+      content: "Även om hettflusher är ett av de vanligaste och mest besvärliga symptomen vid klimakteriet finns det flera naturliga tillvägagångssätt som kan hjälpa. Regelbunden träning, att bibehålla en hälsosam vikt, att undvika utlösare som kryddig mat och alkohol, och att praktisera stressreducerande tekniker som yoga och meditation kan alla göra skillnad. Vissa kvinnor finner lindring med svart cohosh, soja-isoflavoner eller akupunktur, även om forskning om deras effektivitet är blandad. Konsultera alltid din vårdgivare innan du provar nya kosttillskott.",
       category: "evidence-based",
-      author: "Dr. Lisa Rodriguez, ND",
-      readTime: "6 min read",
+      author: "Dr. Maria Andersson, ND",
+      readTime: "6 min läsning",
       publishDate: "2024-01-05",
-      tags: ["natural remedies", "hot flashes", "lifestyle", "supplements"],
+      tags: ["naturliga botemedel", "hettflusher", "livsstil", "kosttillskott"],
       credibility: "expert_reviewed",
       source: "professional_created",
       validationBadge: "expert_verified"
     },
     {
       id: 5,
-      title: "Supporting Your Partner Through Menopause",
-      excerpt: "A guide for partners and family members on how to provide meaningful support during this life transition.",
-      content: "Menopause affects not just the woman experiencing it, but also her partner and family. Understanding the physical and emotional changes your partner is going through is crucial for providing meaningful support. This includes being patient with mood changes, understanding that intimacy may need to be approached differently, and encouraging open communication about symptoms and needs. Partners can also help by learning about menopause, attending doctor's appointments when appropriate, and being a source of emotional support during this challenging transition.",
+      title: "Stödja din partner genom klimakteriet",
+      excerpt: "En guide för partners och familjemedlemmar om hur man ger meningsfullt stöd under denna livsomställning.",
+      content: "Klimakteriet påverkar inte bara kvinnan som upplever det, utan också hennes partner och familj. Att förstå de fysiska och emotionella förändringar din partner går igenom är avgörande för att ge meningsfullt stöd. Detta inkluderar att vara tålmodig med humörsvängningar, förstå att intimitet kan behöva närmas på ett annat sätt, och uppmuntra öppen kommunikation om symptom och behov. Partners kan också hjälpa genom att lära sig om klimakteriet, delta på läkarbesök när det är lämpligt, och vara en källa till emotionellt stöd under denna utmanande övergång.",
       category: "community",
-      author: "James M.",
-      readTime: "4 min read",
+      author: "Erik M.",
+      readTime: "4 min läsning",
       publishDate: "2024-01-03",
-      tags: ["partners", "support", "relationships", "family"],
+      tags: ["partners", "stöd", "relationer", "familj"],
       credibility: "community_verified",
       source: "user_submitted",
       validationBadge: "community_story"
     },
     {
       id: 6,
-      title: "Workplace Accommodations for Menopause Symptoms",
-      excerpt: "How to advocate for workplace support and accommodations to help manage menopause symptoms while working.",
-      content: "Menopause symptoms can significantly impact work performance, but many women are reluctant to discuss these issues with their employers. This article provides practical advice on how to approach conversations about workplace accommodations, from flexible working arrangements to temperature control and access to restrooms. It also covers your legal rights and how to work with HR to create a more supportive work environment. Remember, you don't have to disclose your medical condition, but you can request reasonable accommodations for symptoms that affect your work.",
+      title: "Arbetsplatsanpassningar för klimakteriesymptom",
+      excerpt: "Hur man förespråkar arbetsplatsstöd och anpassningar för att hjälpa till att hantera klimakteriesymptom medan man arbetar.",
+      content: "Klimakteriesymptom kan påverka arbetsprestationen avsevärt, men många kvinnor är ovilliga att diskutera dessa frågor med sina arbetsgivare. Denna artikel ger praktiska råd om hur man närmar sig samtal om arbetsplatsanpassningar, från flexibla arbetsscheman till temperaturkontroll och tillgång till toaletter. Den täcker också dina juridiska rättigheter och hur man arbetar med HR för att skapa en mer stödjande arbetsmiljö. Kom ihåg att du inte behöver avslöja din medicinska tillstånd, men du kan begära rimliga anpassningar för symptom som påverkar ditt arbete.",
       category: "evidence-based",
-      author: "Dr. Rachel Green, PhD",
-      readTime: "6 min read",
+      author: "Dr. Lena Nilsson, PhD",
+      readTime: "6 min läsning",
       publishDate: "2024-01-01",
-      tags: ["workplace", "accommodations", "career", "advocacy"],
+      tags: ["arbetsplats", "anpassningar", "karriär", "förespråkande"],
       credibility: "expert_reviewed",
       source: "professional_created",
       validationBadge: "expert_verified"
@@ -108,16 +108,16 @@ const ArticleList = ({ searchQuery }) => {
   });
 
   const categories = [
-    { value: 'all', label: 'All Articles' },
-    { value: 'evidence-based', label: 'Evidence-Based' },
-    { value: 'community', label: 'Community Stories' }
+    { value: 'all', label: 'Alla artiklar' },
+    { value: 'evidence-based', label: 'Evidensbaserade' },
+    { value: 'community', label: 'Gemenskapsberättelser' }
   ];
 
   const credibilityFilters = [
-    { value: 'all', label: 'All Sources' },
-    { value: 'medical_reviewed', label: 'Medically Reviewed' },
-    { value: 'expert_reviewed', label: 'Expert Verified' },
-    { value: 'community_verified', label: 'Community Stories' }
+    { value: 'all', label: 'Alla källor' },
+    { value: 'medical_reviewed', label: 'Medicinskt granskade' },
+    { value: 'expert_reviewed', label: 'Expertverifierade' },
+    { value: 'community_verified', label: 'Gemenskapsberättelser' }
   ];
 
 
@@ -133,7 +133,7 @@ const ArticleList = ({ searchQuery }) => {
       {/* Filters */}
       <div className="category-filter">
         <div className="filter-group">
-          <h4 className="filter-title">Content Type</h4>
+          <h4 className="filter-title">Innehållstyp</h4>
           <div className="filter-buttons">
             {categories.map(category => (
               <button
@@ -148,7 +148,7 @@ const ArticleList = ({ searchQuery }) => {
         </div>
         
         <div className="filter-group">
-          <h4 className="filter-title">Credibility</h4>
+          <h4 className="filter-title">Trovärdighet</h4>
           <div className="filter-buttons">
             {credibilityFilters.map(filter => (
               <button
@@ -163,7 +163,7 @@ const ArticleList = ({ searchQuery }) => {
         </div>
         
         <div className="results-count">
-          <span className="count-text">{filteredArticles.length} article{filteredArticles.length !== 1 ? 's' : ''} found</span>
+          <span className="count-text">{filteredArticles.length} artikel{filteredArticles.length !== 1 ? 'ar' : ''} hittade</span>
         </div>
       </div>
 
@@ -178,10 +178,10 @@ const ArticleList = ({ searchQuery }) => {
               transition={{ duration: 0.3 }}
             >
               <h3 className="text-gray-500 mb-2 text-xl font-semibold">
-                No articles found
+                Inga artiklar hittades
               </h3>
               <p className="text-gray-400">
-                Try adjusting your search terms or category filter.
+                Prova att justera dina söktermer eller kategorifilter.
               </p>
             </motion.div>
           </div>
@@ -198,12 +198,12 @@ const ArticleList = ({ searchQuery }) => {
                 <div className="article-header">
                   <div className="article-badges">
                     <span className={`article-badge ${article.category === 'evidence-based' ? 'evidence' : 'community'}`}>
-                      {article.category === 'evidence-based' ? 'Evidence-Based' : 'Community Story'}
+                      {article.category === 'evidence-based' ? 'Evidensbaserad' : 'Gemenskapsberättelse'}
                     </span>
                     <span className={`article-badge ${article.validationBadge === 'medically_reviewed' ? 'medical' : article.validationBadge === 'expert_verified' ? 'expert' : 'community'}`}>
-                      {(article.validationBadge === 'medically_reviewed' && 'Medically Reviewed') ||
-                       (article.validationBadge === 'expert_verified' && 'Expert Verified') ||
-                       (article.validationBadge === 'community_story' && 'Community Story')}
+                      {(article.validationBadge === 'medically_reviewed' && 'Medicinskt granskad') ||
+                       (article.validationBadge === 'expert_verified' && 'Expertverifierad') ||
+                       (article.validationBadge === 'community_story' && 'Gemenskapsberättelse')}
                     </span>
                   </div>
                   <span className="read-time">{article.readTime}</span>
@@ -216,7 +216,7 @@ const ArticleList = ({ searchQuery }) => {
 
                 <div className="article-details">
                   <div className="author-info">
-                    <span>By {article.author}</span>
+                    <span>Av {article.author}</span>
                   </div>
                   
                   <div className="date-info">
@@ -225,7 +225,7 @@ const ArticleList = ({ searchQuery }) => {
                 </div>
 
                 <div className="article-tags">
-                  <h4>Topics:</h4>
+                  <h4>Ämnen:</h4>
                   <div className="tag-list">
                     {article.tags.map(tag => (
                       <span key={tag} className="article-tag">#{tag}</span>
@@ -234,8 +234,8 @@ const ArticleList = ({ searchQuery }) => {
                 </div>
 
                 <div className="article-actions">
-                  <button className="read-btn">Read Article</button>
-                  <button className="share-btn">Share</button>
+                  <button className="read-btn">Läs artikel</button>
+                  <button className="share-btn">Dela</button>
                 </div>
               </motion.div>
             </div>

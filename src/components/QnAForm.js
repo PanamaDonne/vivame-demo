@@ -7,19 +7,19 @@ const QnAForm = () => {
   const [submissions, setSubmissions] = useState([
     {
       id: 1,
-      question: "What are the most effective natural remedies for hot flashes?",
+      question: "Vilka är de mest effektiva naturliga botemedlen mot hettflusher?",
       answers: [
         {
           id: 1,
-          text: "I've found that keeping a fan nearby and wearing layers helps. Also, avoiding spicy foods and alcohol in the evening has made a big difference for me.",
-          author: "Sarah M.",
+          text: "Jag har upptäckt att ha en fläkt i närheten och bära lagerkläder hjälper. Att undvika kryddig mat och alkohol på kvällen har också gjort stor skillnad för mig.",
+          author: "Anna M.",
           timestamp: "2024-01-15 14:30",
           likes: 3
         },
         {
           id: 2,
-          text: "Black cohosh supplements worked well for me, but I'd recommend talking to your doctor first. Also, regular exercise and maintaining a healthy weight really helps.",
-          author: "Dr. Lisa Chen, ND",
+          text: "Svart cohosh-kosttillskott fungerade bra för mig, men jag rekommenderar att prata med din läkare först. Regelbunden träning och att bibehålla en hälsosam vikt hjälper verkligen.",
+          author: "Dr. Maria Andersson, ND",
           timestamp: "2024-01-15 16:45",
           likes: 7
         }
@@ -29,18 +29,40 @@ const QnAForm = () => {
     },
     {
       id: 2,
-      question: "How do I talk to my partner about my menopause symptoms?",
+      question: "Hur pratar jag med min partner om mina klimakteriesymptom?",
       answers: [
         {
           id: 3,
-          text: "I found it helpful to explain what's happening to my body and how it affects me emotionally. My partner appreciated the honesty and it brought us closer together.",
-          author: "Maria R.",
+          text: "Jag tyckte det var hjälpsamt att förklara vad som händer med min kropp och hur det påverkar mig känslomässigt. Min partner uppskattade ärligheten och det förde oss närmare varandra.",
+          author: "Karin R.",
           timestamp: "2024-01-14 09:20",
           likes: 4
         }
       ],
       timestamp: "2024-01-14 08:30",
       likes: 2
+    },
+    {
+      id: 3,
+      question: "Hur länge varar klimakteriet vanligtvis?",
+      answers: [
+        {
+          id: 4,
+          text: "Klimakteriet kan pågå i 2-10 år, men det varierar mycket mellan kvinnor. För mig varade det cirka 4 år innan jag slutade menstruera helt.",
+          author: "Eva L.",
+          timestamp: "2024-01-13 11:15",
+          likes: 6
+        },
+        {
+          id: 5,
+          text: "Det är viktigt att komma ihåg att varje kvinnas upplevelse är unik. Vissa har milda symptom i några år, medan andra kan ha mer uttalade symptom under en längre period.",
+          author: "Dr. Anna Lindqvist, MD",
+          timestamp: "2024-01-13 15:30",
+          likes: 8
+        }
+      ],
+      timestamp: "2024-01-13 09:45",
+      likes: 3
     }
   ]);
   const [answeringTo, setAnsweringTo] = useState(null);
@@ -107,38 +129,38 @@ const QnAForm = () => {
   return (
     <div className="qa-container">
       <div className="qa-header">
-        <h2>Community Q&A</h2>
-        <p>Ask questions and get answers from the community</p>
+        <h2>Gemenskapsfrågor & svar</h2>
+        <p>Ställ frågor och få svar från gemenskapen</p>
       </div>
 
       <form className="qa-form" onSubmit={handleQuestionSubmit}>
         <div className="form-group">
-          <label htmlFor="question">Ask a Question:</label>
+          <label htmlFor="question">Ställ en fråga:</label>
           <textarea
             id="question"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
-            placeholder="What would you like to know about menopause, symptoms, treatments, or experiences?"
+            placeholder="Vad skulle du vilja veta om klimakteriet, symptom, behandlingar eller upplevelser?"
             rows="3"
             required
           />
         </div>
 
         <button type="submit" className="submit-btn">
-          Ask Question
+          Skicka fråga
         </button>
 
         {submitted && (
           <div className="success-message">
-            Thank you for your question! It has been posted to the community.
+            Tack för din fråga! Den har publicerats i gemenskapen.
           </div>
         )}
       </form>
 
       <div className="submissions-section">
-        <h3>Community Questions & Answers</h3>
+        <h3>Gemenskapsfrågor & svar</h3>
         {submissions.length === 0 ? (
-          <p className="no-posts">No questions yet. Be the first to ask!</p>
+          <p className="no-posts">Inga frågor än. Var den första att ställa en fråga!</p>
         ) : (
           <div className="submissions-list">
             {submissions.map((submission) => (
@@ -160,9 +182,9 @@ const QnAForm = () => {
                 </div>
 
                 <div className="answers-section">
-                  <h5>Answers ({submission.answers.length})</h5>
+                  <h5>Svar ({submission.answers.length})</h5>
                   {submission.answers.length === 0 ? (
-                    <p className="no-answers">No answers yet. Be the first to help!</p>
+                    <p className="no-answers">Inga svar än. Var den första att hjälpa!</p>
                   ) : (
                     <div className="answers-list">
                       {submission.answers.map((answer) => (
@@ -188,12 +210,12 @@ const QnAForm = () => {
                       <textarea
                         value={answerText}
                         onChange={(e) => setAnswerText(e.target.value)}
-                        placeholder="Share your answer or experience..."
+                        placeholder="Dela ditt svar eller din upplevelse..."
                         rows="3"
                         required
                       />
                       <div className="answer-actions">
-                        <button type="submit" className="submit-answer-btn">Post Answer</button>
+                        <button type="submit" className="submit-answer-btn">Publicera svar</button>
                         <button 
                           type="button" 
                           className="cancel-btn"
@@ -202,7 +224,7 @@ const QnAForm = () => {
                             setAnswerText('');
                           }}
                         >
-                          Cancel
+                          Avbryt
                         </button>
                       </div>
                     </form>
@@ -211,7 +233,7 @@ const QnAForm = () => {
                       className="answer-btn"
                       onClick={() => setAnsweringTo(submission.id)}
                     >
-                      Answer this question
+                      Svara på denna fråga
                     </button>
                   )}
                 </div>

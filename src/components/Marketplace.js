@@ -6,97 +6,97 @@ const Marketplace = () => {
   const [selectedProvider, setSelectedProvider] = useState(null);
 
   const categories = [
-    { id: 'all', name: 'All Providers' },
-    { id: 'gynecologists', name: 'Gynecologists' },
-    { id: 'endocrinologists', name: 'Endocrinologists' },
-    { id: 'naturopaths', name: 'Naturopaths' },
-    { id: 'counselors', name: 'Counselors' },
-    { id: 'nutritionists', name: 'Nutritionists' }
+    { id: 'all', name: 'Alla vårdgivare' },
+    { id: 'gynecologists', name: 'Gynekologer' },
+    { id: 'endocrinologists', name: 'Endokrinologer' },
+    { id: 'naturopaths', name: 'Naturläkare' },
+    { id: 'counselors', name: 'Terapeuter' },
+    { id: 'nutritionists', name: 'Kostrådgivare' }
   ];
 
   const providers = [
     {
       id: 1,
-      name: 'Dr. Sarah Johnson',
-      title: 'Menopause Specialist & Gynecologist',
+      name: 'Dr. Anna Lindqvist',
+      title: 'Klimakteriespecialist & Gynekolog',
       category: 'gynecologists',
       rating: 4.9,
       reviewCount: 127,
-      location: 'San Francisco, CA',
-      distance: '2.3 miles',
-      specialties: ['Hormone Therapy', 'Surgical Menopause', 'Bone Health'],
-      availability: 'Next available: Tomorrow',
-      priceRange: '$300-400',
+      location: 'Stockholm',
+      distance: '2.3 km',
+      specialties: ['Hormonbehandling', 'Kirurgisk klimakterie', 'Benskydd'],
+      availability: 'Nästa tillgänglig: Imorgon',
+      priceRange: '3000-4000 kr',
       image: '',
-      description: 'Board-certified gynecologist with 15+ years specializing in menopause care. Expert in HRT management and surgical menopause support.',
+      description: 'Specialistläkare med 15+ års erfarenhet av klimakterievård. Expert på HRT-hantering och stöd vid kirurgisk klimakterie.',
       verified: true,
       acceptsInsurance: true
     },
     {
       id: 2,
-      name: 'Dr. Lisa Chen',
-      title: 'Naturopathic Doctor',
+      name: 'Dr. Maria Andersson',
+      title: 'Naturläkare',
       category: 'naturopaths',
       rating: 4.8,
       reviewCount: 89,
-      location: 'Berkeley, CA',
-      distance: '5.1 miles',
-      specialties: ['Natural Hormones', 'Nutrition Therapy', 'Stress Management'],
-      availability: 'Next available: Next week',
-      priceRange: '$200-300',
+      location: 'Göteborg',
+      distance: '5.1 km',
+      specialties: ['Naturliga hormoner', 'Kostterapi', 'Stresshantering'],
+      availability: 'Nästa tillgänglig: Nästa vecka',
+      priceRange: '2000-3000 kr',
       image: '',
-      description: 'Naturopathic doctor focusing on natural approaches to menopause management through lifestyle and herbal medicine.',
+      description: 'Naturläkare som fokuserar på naturliga tillvägagångssätt för klimakteriehantering genom livsstil och växtmedicin.',
       verified: true,
       acceptsInsurance: false
     },
     {
       id: 3,
-      name: 'Dr. Maria Rodriguez',
-      title: 'Endocrinologist',
+      name: 'Dr. Eva Johansson',
+      title: 'Endokrinolog',
       category: 'endocrinologists',
       rating: 4.7,
       reviewCount: 156,
-      location: 'Oakland, CA',
-      distance: '8.2 miles',
-      specialties: ['Hormone Imbalances', 'Thyroid Health', 'Metabolic Health'],
-      availability: 'Next available: This week',
-      priceRange: '$350-450',
+      location: 'Malmö',
+      distance: '8.2 km',
+      specialties: ['Hormonrubbningar', 'Sköldkörtelhälsa', 'Metabolisk hälsa'],
+      availability: 'Nästa tillgänglig: Denna vecka',
+      priceRange: '3500-4500 kr',
       image: '',
-      description: 'Endocrinologist specializing in complex hormone disorders and metabolic health during menopause transition.',
+      description: 'Endokrinolog som specialiserar sig på komplexa hormonsjukdomar och metabolisk hälsa under klimakterietransitionen.',
       verified: true,
       acceptsInsurance: true
     },
     {
       id: 4,
-      name: 'Jennifer Walsh',
-      title: 'Licensed Therapist',
+      name: 'Karin Svensson',
+      title: 'Legitimerad terapeut',
       category: 'counselors',
       rating: 4.9,
       reviewCount: 73,
-      location: 'San Francisco, CA',
-      distance: '1.8 miles',
-      specialties: ['Menopause Counseling', 'Anxiety Management', 'Relationship Support'],
-      availability: 'Next available: Today',
-      priceRange: '$150-200',
+      location: 'Stockholm',
+      distance: '1.8 km',
+      specialties: ['Klimakterierådgivning', 'Ångesthantering', 'Relationsstöd'],
+      availability: 'Nästa tillgänglig: Idag',
+      priceRange: '1500-2000 kr',
       image: '',
-      description: 'Licensed therapist specializing in emotional support during menopause transition and relationship counseling.',
+      description: 'Legitimerad terapeut som specialiserar sig på emotionellt stöd under klimakterietransitionen och relationsrådgivning.',
       verified: true,
       acceptsInsurance: true
     },
     {
       id: 5,
-      name: 'Dr. Amanda Foster',
-      title: 'Nutritionist & Wellness Coach',
+      name: 'Dr. Lena Nilsson',
+      title: 'Kostrådgivare & Välmåendecoach',
       category: 'nutritionists',
       rating: 4.6,
       reviewCount: 94,
-      location: 'Palo Alto, CA',
-      distance: '12.5 miles',
-      specialties: ['Menopause Nutrition', 'Weight Management', 'Bone Health'],
-      availability: 'Next available: Next week',
-      priceRange: '$120-180',
+      location: 'Uppsala',
+      distance: '12.5 km',
+      specialties: ['Klimakteriekost', 'Vikthantering', 'Benskydd'],
+      availability: 'Nästa tillgänglig: Nästa vecka',
+      priceRange: '1200-1800 kr',
       image: '',
-      description: 'Registered dietitian specializing in nutrition strategies for menopause symptoms and long-term health.',
+      description: 'Legitimerad dietist som specialiserar sig på koststrategier för klimakteriesymptom och långsiktig hälsa.',
       verified: true,
       acceptsInsurance: false
     }
@@ -107,18 +107,18 @@ const Marketplace = () => {
     : providers.filter(provider => provider.category === selectedCategory);
 
   const handleBookAppointment = (provider) => {
-    alert(`Booking appointment with ${provider.name}. This would integrate with a real booking system and payment processing.`);
+    alert(`Bokar tid med ${provider.name}. Detta skulle integrera med ett riktigt bokningssystem och betalningshantering.`);
   };
 
   const handleShareAssessment = (provider) => {
-    alert(`Sharing self-assessment report with ${provider.name}. This would allow the provider to review your symptoms and prepare for your appointment.`);
+    alert(`Delar självskattningsrapport med ${provider.name}. Detta skulle låta vårdgivaren granska dina symptom och förbereda för ditt möte.`);
   };
 
   return (
     <div className="marketplace-container">
       <div className="marketplace-header">
-        <h2>Find Support & Healthcare Providers</h2>
-        <p>Connect with verified specialists who understand menopause and can provide personalized care</p>
+        <h2>Hitta stöd & vårdgivare</h2>
+        <p>Anslut dig till verifierade specialister som förstår klimakteriet och kan ge personlig vård</p>
       </div>
 
       <div className="category-filter">
@@ -146,7 +146,7 @@ const Marketplace = () => {
                 <div className="provider-rating">
                   <span className="rating-stars">★★★★★</span>
                   <span className="rating-score">{provider.rating}</span>
-                  <span className="rating-count">({provider.reviewCount} reviews)</span>
+                  <span className="rating-count">({provider.reviewCount} recensioner)</span>
                 </div>
               </div>
             </div>
@@ -163,13 +163,13 @@ const Marketplace = () => {
               <div className="price-info">
                 <span>{provider.priceRange}</span>
                 {provider.acceptsInsurance && (
-                  <span className="insurance-badge">Accepts Insurance</span>
+                  <span className="insurance-badge">Tar emot försäkring</span>
                 )}
               </div>
             </div>
 
             <div className="specialties">
-              <h4>Specialties:</h4>
+              <h4>Specialiteter:</h4>
               <div className="specialty-tags">
                 {provider.specialties.map(specialty => (
                   <span key={specialty} className="specialty-tag">{specialty}</span>
@@ -184,13 +184,13 @@ const Marketplace = () => {
                 className="book-btn"
                 onClick={() => handleBookAppointment(provider)}
               >
-                Book Appointment
+                Boka tid
               </button>
               <button 
                 className="share-btn"
                 onClick={() => handleShareAssessment(provider)}
               >
-                Share Assessment
+                Dela skattning
               </button>
             </div>
           </div>
@@ -200,9 +200,9 @@ const Marketplace = () => {
       {selectedProvider && (
         <div className="provider-modal">
           <div className="modal-content">
-            <h3>Provider Details</h3>
-            <p>Detailed provider information would appear here</p>
-            <button onClick={() => setSelectedProvider(null)}>Close</button>
+            <h3>Vårdgivardetaljer</h3>
+            <p>Detaljerad vårdgivarinformation skulle visas här</p>
+            <button onClick={() => setSelectedProvider(null)}>Stäng</button>
           </div>
         </div>
       )}

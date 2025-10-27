@@ -21,7 +21,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
       <TextField
         fullWidth
         variant="outlined"
-        placeholder="Search articles, topics, or experiences..."
+        placeholder="Sök artiklar eller ämnen"
         value={searchQuery}
         onChange={handleSearchChange}
         InputProps={{
